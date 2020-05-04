@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function fn1(){
+        var sln = document.getElementById("sol").value;
+        sln+="ProblemCode"+document.getElementById("probcode").value;
+        sln+=document.getElementById('language').value;
+        document.getElementById("sbt").value=sln;
+        javascript:location.href="mailto:amitsingh880266@gmail.com?body="+document.getElementById("sbt").value;
+        alert("Your Solution was submitted, Within 3 hours Your can Check your result! Keep Practicing");
+        document.getElementById("sol").innerHTMl="";
+      }
+    </script>
+  </head>
+  <body style="background-color:silver;">
+    <h2>Instruction</h2>
+    <ol>
+      <li>First Compile and Run Your Code </li> <a href="https://www.onlinegdb.com/">Here</a>
+      <li>Submit your code.</li>
+      <li>Our Team will run your code on Different Test Cases.</li>
+      <li>Evaluation will be based on our large input test Cases.</li>
+    </ol>
+    <h2>Submission</h2>
+    <form class="" action="mailto:amitsingh880266@gmail.com" method="post" enctype="text/plain" id="reg" action="action_page.php">
+      <label for="probcode">Enter Problem Code</label>
+      <input type="text" id="probcode" name="probcode" value="" placeholder="Problem Code"><br><br>
+      <label for="language">Select Your Prefered Programming Language</label>
+      <select class="" id="language" name="">
+          <option value="">Make a Choice</option>
+          <option value="C">C</option>
+          <option value="CPP">C++</option>
+          <option value="Java">Java</option>
+          <option value="Python">Python</option>
+          <option value="javascript">Javascript</option>
+      </select>
+      <textarea id="sol" rows="50" cols="180">
+      </textarea>
+      <p id="sbt"></p>
+      <button type="button" onclick="fn1()" name="button">Submit Solution</button>
+    </form>
+
+   </body>
+</html>
